@@ -1,0 +1,5 @@
+Django notes
+
+Udemy Course WordCount project
+   
+    Objective: Django review & update to 2.0

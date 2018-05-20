@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Count Page!</title>
+</head>
+<body>
+  <h1>COUNTING!</h1>
+
+  <a href="{% url 'home' %}">Restart count</a>
+  <h2>There are {{ wordcount}} words in your Text </h2>
+
+  <h2>Your Text:</h2>
+  {{fulltext}}
+  <h2>Words counted</h2>
+  <table>
+  {% for word,wordcount in sortedWords %}
+    <tr>
+      <td> {{word}} </td>
+      <td> {{wordcount}} </td>
+    </tr>
+  {% endfor %}
+  <table>
+
+</body>
+</html>

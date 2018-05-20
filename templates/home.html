@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My HomePage!</title>
+  <style>
+    .jumbo {
+      width: 80%;
+      background-color: #9f9f9f;
+      margin: auto;
+      padding: 1em;
+      border-radius: 1em;
+    }
+    .bigtitle {
+      text-align: center;
+      color: white;
+    }
+    .menu-footer {
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="jumbo">
+    <h1 class="bigtitle">THIS IS HTML FAM!</h1>
+    <h2> {{ message }} </h2>
+    <form action="{% url 'count' %}" method="POST">
+      {% csrf_token %}
+      <textarea cols="80" rows="5" name="fulltext"></textarea>
+      <br>
+      <input type="submit" value="Count!" />
+
+      <div class="menu-footer">
+      <p>
+        <a href="{% url 'about' %}">About</a>
+      </p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
